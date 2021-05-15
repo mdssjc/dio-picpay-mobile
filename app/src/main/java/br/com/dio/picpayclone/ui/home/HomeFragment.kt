@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun vaiParaLogin() {
-        val direcao = HomeFragmentDirections.actionNavigationHomeToLoginFragment()
+        val direcao = HomeFragmentDirections.actionGlobalLoginFragment()
         val controlador = findNavController()
         controlador.navigate(direcao)
     }

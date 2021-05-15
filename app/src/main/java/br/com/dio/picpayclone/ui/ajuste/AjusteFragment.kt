@@ -1,4 +1,4 @@
-package br.com.dio.picpayclone.ui.notifications
+package br.com.dio.picpayclone.ui.ajuste
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,18 +10,18 @@ import androidx.lifecycle.Observer
 import br.com.dio.picpayclone.R
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class NotificationsFragment : Fragment() {
+class AjusteFragment : Fragment() {
 
-    private val notificationsViewModel: NotificationsViewModel by viewModel()
+    private val ajusteViewModel: AjusteViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
+        val root = inflater.inflate(R.layout.fragment_ajuste, container, false)
         val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        ajusteViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

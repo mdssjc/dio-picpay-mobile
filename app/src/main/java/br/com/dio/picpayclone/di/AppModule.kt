@@ -1,13 +1,15 @@
 package br.com.dio.picpayclone.di
 
-import br.com.dio.picpayclone.ui.dashboard.DashboardViewModel
+import br.com.dio.picpayclone.ui.componente.ComponenteViewModel
+import br.com.dio.picpayclone.ui.pagar.PagarViewModel
 import br.com.dio.picpayclone.ui.home.HomeViewModel
-import br.com.dio.picpayclone.ui.notifications.NotificationsViewModel
+import br.com.dio.picpayclone.ui.ajuste.AjusteViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
     viewModel { HomeViewModel() }
-    viewModel { DashboardViewModel() }
-    viewModel { NotificationsViewModel() }
+    viewModel { PagarViewModel() }
+    viewModel { AjusteViewModel() }
+    viewModel { ComponenteViewModel() }
 }

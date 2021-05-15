@@ -1,13 +1,18 @@
-package br.com.dio.picpayclone.ui.notifications
+package br.com.dio.picpayclone.ui.pagar
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class PagarViewModel : ViewModel() {
+
+    init {
+        Log.i("início", "início")
+    }
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is dashboard Fragment"
     }
     val text: LiveData<String> = _text
 }
